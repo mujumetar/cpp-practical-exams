@@ -11,14 +11,14 @@ int main() {
 	int tens = (num / 10) % 10;         
 	int ones = num % 10;             
 	
-	
+
 
  if (num < 100 || num > 999) {
-        cout << "Please enter a valid 3-digit number!" << endl;
-    } else {
-        int reversed = reverseNumber(num);
-        cout << "Reversed number: " << reversed << endl;
-    }
-    
-    return 0;
+		cout << "Please enter a valid 3-digit number!" << endl;
+	} else {
+		
+		cout << "Reversed number: " << ones << tens << hundreds << endl;
+	}
+	
+	return 0;
 }

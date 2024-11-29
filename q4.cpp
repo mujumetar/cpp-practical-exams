@@ -1,25 +1,36 @@
 #include <iostream>
-
 using namespace std;
 
 int main() {
-	int r;
+	int n;
 
-	cout << "enter size: ";
-	cin >> r;
-	
-	int a[r];
+	cout << "Enter the size of the array: ";
+	cin >> n;
 
-	for(int i=0; i<r; i++){
-		cout << "a["<<i<<"]: ";
-		cin >> a[i];
+	int arr[n]; 
+
+	cout << "Enter " << n << " elements of the array: " << endl;
+	for (int i = 0; i < n; i++) {
+		cout << "arr["<<i<<"]: ";
+		cin >> arr[i];
+	}
+
+	int* ptr = arr;
+
+
+
+	for (int i = 0; i < n; i++) {
+		*(ptr + i) = *(ptr + i) * *(ptr + i);  
+	}
+
+	cout << "Array after squaring each element: ";
+	for (int i = 0; i < n; i++) {
+		cout << "square of: " <<  "arr["<<i<<"]: ";
+		cout << arr[i] << " "; 
+		cout << endl;
 	}
 	cout << endl;
-	cout << "squares: - " << endl;
-	
-	for(int j=0;j < r; j++) 
-	{
-		cout << a[j] * a[j] << endl;
-	}
+	cout << endl;
 
+	return 0;
 }
