@@ -27,6 +27,7 @@ cout << endl;
 		cin.ignore(); 
 		cout << "City: ";
 		getline(cin, houses[i].city);
+		cout << endl;
 	}
 
 	cout << "\nHouse Details:\n";
